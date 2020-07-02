@@ -24,6 +24,7 @@ initial begin
 	$readmemh(opjump_table_file, opjump_table);
 end //intial
 
+// define command functionality
 always_comb begin
 	next_call_stack_ptr = call_stack_ptr;
 	next_call_stack = call_stack;

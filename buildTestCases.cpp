@@ -65,6 +65,7 @@ int main(int argc, char* argv[]){
 
 	cout << "\nTest case expression builder for verilator custom testbench\n\n";
 
+
 	declareStruct();
 
 	return 0;
