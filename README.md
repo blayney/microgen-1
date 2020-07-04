@@ -24,10 +24,11 @@ The testing and verification is done using Verilator:
 `sudo make install`
 
 ## about the project
+#### Planning and Figuring out First Steps
 
-I’m going to deploy onto a CMOD A7, which is effectively a breadboardable development board built around a Xilinx Artix 7 with USB JTAG + UART, some SRAM, Quad-SPI flash allowing me to save the configuration on the board instead of bitstreaming every time the device powercycles, and some IO like buttons and LEDs which make testing easier.
+I'm going to deploy onto a CMOD A7, which is effectively a breadboardable development board built around a Xilinx Artix 7 with USB JTAG + UART, some SRAM, Quad-SPI flash allowing me to save the configuration on the board instead of bitstreaming every time the device powercycles, and some IO like buttons and LEDs which make testing easier.
 
-I’ll be porting a small number of instructions from RISC-V over to this CPU, using a combination of microcode and hardwired implementation - a lot of FPGA RISC-V microarchitectures that seem or claim to be hardwired use some amount of (what I would call) microcode to run routines / control flow having “interpreted” an instruction or set of instructions. Keeping a small number of hardware operations (and modules) means verification and development is easier, so any instructions that can be simplified or implimented as basic routines made of other instructions in the set (using what I would call a microengine by the definition in this paper) are a bonus.
+I'll be porting a small number of instructions from RISC-V over to this CPU, using a combination of microcode and hardwired implementation - a lot of FPGA RISC-V microarchitectures that seem or claim to be hardwired use some amount of (what I would call) microcode to run routines / control flow having "interpreted" an instruction or set of instructions. Keeping a small number of hardware operations (and modules) means verification and development is easier, so any instructions that can be simplified or implimented as basic routines made of other instructions in the set (using what I would call a microengine by the definition in [this paper](https://sites.cs.ucsb.edu/~franklin/154/micmachandout.pdf)) are a bonus.
 
 
 #### Development Environment - Verilator and SystemVerilog Style
